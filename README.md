@@ -9,7 +9,7 @@ Scanned text PDFs/JP2s are often skewed and uncropped. To set up for printing fo
 1. Install image codecs for ImageMagick:
    1. OpenJPEG: https://github.com/uclouvain/openjpeg/blob/master/INSTALL.md
    2. pkg-config: `sudo apt-get install pkg-config`
-   3. Latest versions of TIFF anf JPEG from http://www.imagemagick.org/download/delegates/
+   3. Latest versions of TIFF and JPEG from http://www.imagemagick.org/download/delegates/
       1. tiff-4.0.8.tar.gz
       2. jpegsrc.v9b.tar.gz  
       For installing:
