@@ -26,6 +26,7 @@ Scanned text PDFs/JP2s are often skewed and uncropped. To set up for printing fo
       ```
 3. Install scantailor: `sudo apt-get install scantailor`
 4. Install PDF-Booklet
+5. Install img2pdf: `sudo apt-get install img2pdf`
 
 ## Procedure
 
@@ -51,16 +52,22 @@ Scanned text PDFs/JP2s are often skewed and uncropped. To set up for printing fo
    2. Figure out DPI of input using pixel resolution and/or PDF page size.
    3. Apply this DPI value in scan tailor
    4. Check "RTL" for Arabic texts
-   5. Run "deskew" on "Auto" for all pages
-   6. 1. Run "Select content" on "Auto" for all pages"
+   5. Apply "deskew" on "Auto" for all pages, and then run
+   6. 1. Apply "Select content" on "Auto" for all pages, and then run
       2. In rightmost pane change sorting order from "Natural order" to "Order by increasing width". Go to the lowest (widest) page and manually shrink width to correct textbox. Keep doing for for the widest pages until they normalize.
       3. Now change sorting order to "Order by increasing height" and repeat.
    7. Set the correct margins and keep same page size for all pages. Verify that the page size for all pages is not much larger than the margins. If it is then repeat manual shrinking of content for offending pages.
-   8. In the "Output" stage, set mode to "grayscale" and set white margins. Then run output.
-4. Join scantailor output TIFFs to a PDF using ImageMagick. ImageMagick hangs if there are too many so do them in batches of 100 or 128.
-   ```
-   magick scantailor_output_*.tiff output.pdf
-   ```
+   8. In the "Output" stage, set mode to "grayscale" and set white margins. Apply to all pages, and then run output.
+4. Join scantailor output TIFFs to a PDF using ImageMagick of img2pdf. ImageMagick hangs if there are too many so do them in batches of 100 or 128.
+   1. img2pdf:
+      ```
+      img2pdf *.tif -o out.pdf
+      ```
+   2. ImageMagick:
+      ```
+      magick scantailor_output_*.tiff output.pdf
+      ```
+   
 5. Set up PDF for printing in PDF-Booklet
 
 
