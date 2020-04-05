@@ -25,7 +25,7 @@ Scanned text PDFs/JP2s are often skewed and uncropped. To set up for printing fo
       convert -list format | grep -i jp2
       ```
 3. Install scantailor: `sudo apt-get install scantailor`
-4. Install PDF-Booklet
+4. Install PDF-Booklet: http://pdfbooklet.sourceforge.net/
 5. Install img2pdf: `sudo apt-get install img2pdf`
 
 ## Procedure
