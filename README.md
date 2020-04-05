@@ -34,6 +34,7 @@ Scanned text PDFs/JP2s are often skewed and uncropped. To set up for printing fo
 2. If images are JPEG2000 then convert them to TIFF:
    1. Write shell script `convert_jp2_2_tiff`:
       ```
+      #!/bin/sh
       dirname_val=`basename "$d"`
       echo $file
       cd "$dirname_val"
