@@ -11,7 +11,8 @@ Scanned text PDFs/JP2s are often skewed and uncropped. To set up for printing fo
    2. pkg-config: `sudo apt-get install pkg-config`
    3. Latest versions of TIFF anf JPEG from http://www.imagemagick.org/download/delegates/
       a. tiff-4.0.8.tar.gz
-      a. jpegsrc.v9b.tar.gz:
+      b. jpegsrc.v9b.tar.gz:  
+      For installing:
       ```
       ./configure
       make
